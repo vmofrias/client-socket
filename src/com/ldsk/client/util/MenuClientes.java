@@ -3,8 +3,6 @@ package com.ldsk.client.util;
 import java.util.Scanner;
 
 import com.ldsk.client.service.ClienteVendedorOperateService;
-import com.ldsk.server.model.Artigo;
-import com.ldsk.server.model.ClienteVendedor;
 
 public class MenuClientes {
 
@@ -27,10 +25,11 @@ public class MenuClientes {
 					ClienteVendedorOperateService.operacaoVenda();
 				break;
 				case 2:
-					
+					//ENCERRAR
+					ClienteVendedorOperateService.operacaoEncerrar();
 				break;	
 				case 3:
-					//Detalhar
+					//DETALHAR
 					ClienteVendedorOperateService.operacaoListar();
 				break;
 				default:

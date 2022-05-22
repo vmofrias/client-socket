@@ -34,6 +34,28 @@ public class ClienteVendedorOperateService {
 		SocketClientService.conexao(m);
 	}
 	
+	
+	public static void operacaoEncerrar() {
+		Scanner scanEncerrar = new Scanner(System.in);
+		
+		System.out.println("Digite o ID do responsavel pelo artigo: ");
+		int idVendedor = scanEncerrar.nextInt();
+		System.out.println("Digite o ID do artigo que deseja encerrar: ");
+		int artigoId = scanEncerrar.nextInt();
+		
+		Mensagem m = new Mensagem("ENCERRAR");
+		
+		ClienteVendedor formV =  new ClienteVendedor();
+		formV.setId(idVendedor);
+		Artigo formA = new Artigo();
+		formA.setId(artigoId);
+		
+		m.setParam("idVendedor", formV.getId());
+		m.setParam("artigoId", formA.getId());
+		
+		SocketClientService.conexao(m);
+	}
+	
 	public static void operacaoListar() {
 		Mensagem m = new Mensagem("LISTAR");
 		
