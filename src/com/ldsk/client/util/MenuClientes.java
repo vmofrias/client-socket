@@ -2,7 +2,9 @@ package com.ldsk.client.util;
 
 import java.util.Scanner;
 
+import com.ldsk.client.service.ClienteCompradorOperateService;
 import com.ldsk.client.service.ClienteVendedorOperateService;
+import com.ldsk.server.model.ClienteComprador;
 
 public class MenuClientes {
 
@@ -32,6 +34,9 @@ public class MenuClientes {
 					//DETALHAR
 					ClienteVendedorOperateService.operacaoListar();
 				break;
+				case 4:
+					System.out.println("Voce voltou.");
+				break;
 				default:
 					System.out.println("Opcao invalida!");
 				break;
@@ -44,7 +49,7 @@ public class MenuClientes {
 		Scanner scan = new Scanner(System.in);
 		
 		do {
-			System.out.println("-------- MENU CLIENTE VENDEDOR --------");
+			System.out.println("-------- MENU CLIENTE COMPRADOR --------");
 			System.out.println("1 - Executar lance");
 			System.out.println("2 - Artigos em aberto (lista)");
 			System.out.println("3 - Voltar");
@@ -54,10 +59,14 @@ public class MenuClientes {
 			switch(escolhaComprador) {
 				case 1:
 					//LANCAR
-					
+					ClienteCompradorOperateService.operacaoLance();
 				break;
 				case 2:
 					//LISTAR
+					ClienteCompradorOperateService.operacaoListarArtigosAbertos();
+				break;
+				case 3:
+					System.out.println("Voce voltou.");
 				break;
 				default:
 					System.out.println("Opcao invalida!");

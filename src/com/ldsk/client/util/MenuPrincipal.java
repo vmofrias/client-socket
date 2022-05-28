@@ -2,8 +2,6 @@ package com.ldsk.client.util;
 
 import java.util.Scanner;
 
-import com.ldsk.server.protocol.Mensagem;
-
 public class MenuPrincipal {
 	public static void menu() {
 		int escolha;
