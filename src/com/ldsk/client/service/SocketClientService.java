@@ -11,9 +11,11 @@ import com.ldsk.server.protocol.StatusMensagem;
 public class SocketClientService {
 	
 	public static void conexao(Mensagem m) {
+		int port = 12345;
+		String ip = "192.168.3.14";
+		System.out.println("Cliente rodando na porta: " + port);
 		try {
-			Socket socket = new Socket("localhost", 5555);
-			
+			Socket socket = new Socket(ip, port);
 			ObjectOutputStream output = new ObjectOutputStream(socket.getOutputStream());
 			ObjectInputStream input = new ObjectInputStream(socket.getInputStream());
 			
@@ -36,7 +38,8 @@ public class SocketClientService {
 			input.close();
 			socket.close();
 		} catch (IOException e) {
-			System.out.println("Erro no cliente: " + e);
+			System.out.println("Erro no cliente: " + e + "\nMessage: " + e.getMessage() + "\n" + e.getLocalizedMessage()
+			+ "\n" + e.getCause());
 		}catch(ClassNotFoundException e) {
 			System.out.println("Erro no cast: " + e.getMessage());
 		}

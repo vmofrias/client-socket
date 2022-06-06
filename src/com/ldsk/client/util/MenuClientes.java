@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 import com.ldsk.client.service.ClienteCompradorOperateService;
 import com.ldsk.client.service.ClienteVendedorOperateService;
-import com.ldsk.server.model.ClienteComprador;
 
 public class MenuClientes {
 
