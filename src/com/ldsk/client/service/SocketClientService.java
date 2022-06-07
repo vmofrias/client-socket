@@ -12,8 +12,7 @@ public class SocketClientService {
 	
 	public static void conexao(Mensagem m) {
 		int port = 12345;
-		String ip = "192.168.3.14";
-		System.out.println("Cliente rodando na porta: " + port);
+		String ip = "192.168.43.56";
 		try {
 			Socket socket = new Socket(ip, port);
 			ObjectOutputStream output = new ObjectOutputStream(socket.getOutputStream());
